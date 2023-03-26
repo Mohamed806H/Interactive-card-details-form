@@ -16,19 +16,107 @@
     <title>Frontend Mentor | Interactive card details form</title>
   </head>
   <body>
-    <header class="app__header">
+    <header class="app__header d-flex">
       <section class="app__header-section-left-side">
-        <div class="app__header-section-left-side-top-card">
-          <img src="./images/card-logo.svg" alt="card-logo" />
+        <div
+          class="app__header-section-left-side-top-card position-relative z-2"
+        >
+          <div class="bg-card">
+            <img src="./images/bg-card-front.png" alt="bg-card-front" />
+          </div>
+          <div class="card-image">
+            <img src="./images/card-logo.svg" alt="card-logo" />
+          </div>
           <div class="card-details">
-            <p class="cardnumber">0000 0000 0000 0000</p>
-            <p class="name">Jane Appleseed</p>
-            <p class="date">00/00</p>
+            <p class="cardnumber text-white">0000 0000 0000 0000</p>
+            <p class="name text-white">JANE APPLESEED</p>
+            <p class="date text-white">
+              <span class="month">00</span>/<span class="year">00</span>
+            </p>
           </div>
         </div>
-        <div class="app__header-section-leftside-bottom-card"></div>
+        <div
+          class="app__header-section-left-side-bottom-card position-relative z-1"
+        >
+          <div class="bg-card">
+            <img src="./images/bg-card-back.png" alt="bg-card-back" />
+          </div>
+          <div class="card-details">
+            <p class="Cvc">000</p>
+          </div>
+        </div>
       </section>
-      <section class="app__header-section-right-side"></section>
+      <section class="app__header-section-right-side d-flex flex-column">
+        <form action="">
+          <div class="CardHolderName d-flex flex-column">
+            <label>CARDHOLDER NAME</label>
+            <input
+              type="text"
+              placeholder="e.g. Jane Appleseed"
+              class="CardNameInp"
+            />
+            <p class="error-cardname hidden">can't be blank</p>
+          </div>
+          <div class="CardNumber d-flex flex-column">
+            <label for="CardNumber">CARD NUMBER</label>
+            <input
+              type="number"
+              oninput="if(this.value.length > this.maxLength) this.value=this.value.slice(0,this.maxLength)"
+              minlength="16"
+              maxlength="16"
+              placeholder="e.g. 1234 5678 9123 0000"
+              class="NumberInp"
+            />
+            <p class="error-cardnumber hidden">can't be blank</p>
+          </div>
+          <div class="CardDate d-flex flex-column">
+            <label>EXP. DATE (MM/YY)</label>
+            <input
+              type="number"
+              placeholder="MM"
+              oninput="if(this.value.length > this.maxLength) this.value=this.value.slice(0,this.maxLength)"
+              minlength="2"
+              maxlength="2"
+              class="MonthInp"
+            />
+            <input
+              type="number"
+              placeholder="YY"
+              oninput="if(this.value.length > this.maxLength) this.value=this.value.slice(0,this.maxLength)"
+              minlength="2"
+              maxlength="2"
+              class="YearInp"
+            />
+            <p class="error-carddate hidden">can't be blank</p>
+          </div>
+          <div class="CardCVC d-flex flex-column">
+            <label for="CVC" class="edit">CVC</label>
+            <input
+              type="number"
+              placeholder="e.g. 123"
+              oninput="if(this.value.length > this.maxLength) this.value=this.value.slice(0,this.maxLength)"
+              minlength="3"
+              maxlength="3"
+              class="CVCINP"
+            />
+            <p class="error-cardCVC hidden">can't be blank</p>
+          </div>
+          <button type="submit" id="submit-btn" class="text-white">
+            Confirm
+          </button>
+        </form>
+      </section>
+      <section class="app__header-section-right-side-Thank hidden">
+        <div class="img">
+          <img src="./images/icon-complete.svg" alt="icon-complete" />
+        </div>
+        <div class="thank">
+          <h1>THANK YOU!</h1>
+          <p>We've added your card details</p>
+          <button class="submit-button text-white">Continue</button>
+        </div>
+      </section>
     </header>
+    <script src="./js/index.js"></script>
   </body>
 </html>

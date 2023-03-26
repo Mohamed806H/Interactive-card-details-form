@@ -2,7 +2,7 @@
 :root {
   --font-base: "Space Grotesk", sans-serif;
   --clr-Red: hsl(0, 100%, 66%);
-  --clr-LG: hsl(249, 99%, 64%), hsl(278, 94%, 30%);
+  --clr-LG: hsl(249, 99%, 64%);
   --clr-WT: hsl(0, 0%, 100%);
   --clr-LGV: hsl(270, 3%, 87%);
   --clr-DGV: hsl(279, 6%, 55%);
@@ -39,6 +39,7 @@ body {
   font-size: 18px;
   font-family: var(--font-base);
   font-weight: 500;
+  overflow-x: hidden;
 }
 /* Set core body defaults */
 body {
