@@ -4,10 +4,12 @@ This is a solution to the [Interactive card details form challenge on Frontend M
 
 ## Screenshot
 
+![desktop-preview](https://user-images.githubusercontent.com/91362640/227813539-8dc68999-475d-43c9-99c9-089bef043fd7.jpg)
+
 ## Links
 
-- Solution URL:()
-- Live Site URL:()
+- Solution URL:(https://www.frontendmentor.io/solutions/interactive-card-details-form-solution-Y9MI3QB8Rq)
+- Live Site URL:(https://mohamed806h.github.io/Interactive-card-details-form/)
 
 ## Built with
 
